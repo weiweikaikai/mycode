@@ -16,7 +16,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace demo {
+namespace wk {
 
 namespace {
 
@@ -81,9 +81,9 @@ void protobuf_AddDesc_msg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\tmsg.proto\022\004demo\"E\n\003msg\022\017\n\007MsgType\030\001 \002("
-    "\005\022\017\n\007MsgInfo\030\002 \002(\t\022\017\n\007MsgFrom\030\003 \002(\t\022\013\n\003o"
-    "pt\030\004 \001(\t", 88);
+    "\n\tmsg.proto\022\002wk\"E\n\003msg\022\017\n\007msgtype\030\001 \002(\005\022"
+    "\017\n\007msginfo\030\002 \002(\t\022\017\n\007msgfrom\030\003 \002(\t\022\013\n\003opt"
+    "\030\004 \001(\t", 86);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "msg.proto", &protobuf_RegisterTypes);
   msg::default_instance_ = new msg();
@@ -101,9 +101,9 @@ struct StaticDescriptorInitializer_msg_2eproto {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int msg::kMsgTypeFieldNumber;
-const int msg::kMsgInfoFieldNumber;
-const int msg::kMsgFromFieldNumber;
+const int msg::kMsgtypeFieldNumber;
+const int msg::kMsginfoFieldNumber;
+const int msg::kMsgfromFieldNumber;
 const int msg::kOptFieldNumber;
 #endif  // !_MSC_VER
 
@@ -198,7 +198,7 @@ bool msg::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 MsgType = 1;
+      // required int32 msgtype = 1;
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -209,15 +209,15 @@ bool msg::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_MsgInfo;
+        if (input->ExpectTag(18)) goto parse_msginfo;
         break;
       }
 
-      // required string MsgInfo = 2;
+      // required string msginfo = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_MsgInfo:
+         parse_msginfo:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_msginfo()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8String(
@@ -226,15 +226,15 @@ bool msg::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(26)) goto parse_MsgFrom;
+        if (input->ExpectTag(26)) goto parse_msgfrom;
         break;
       }
 
-      // required string MsgFrom = 3;
+      // required string msgfrom = 3;
       case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_MsgFrom:
+         parse_msgfrom:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_msgfrom()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8String(
@@ -282,12 +282,12 @@ bool msg::MergePartialFromCodedStream(
 
 void msg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required int32 MsgType = 1;
+  // required int32 msgtype = 1;
   if (has_msgtype()) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->msgtype(), output);
   }
 
-  // required string MsgInfo = 2;
+  // required string msginfo = 2;
   if (has_msginfo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->msginfo().data(), this->msginfo().length(),
@@ -296,7 +296,7 @@ void msg::SerializeWithCachedSizes(
       2, this->msginfo(), output);
   }
 
-  // required string MsgFrom = 3;
+  // required string msgfrom = 3;
   if (has_msgfrom()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->msgfrom().data(), this->msgfrom().length(),
@@ -322,12 +322,12 @@ void msg::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* msg::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required int32 MsgType = 1;
+  // required int32 msgtype = 1;
   if (has_msgtype()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->msgtype(), target);
   }
 
-  // required string MsgInfo = 2;
+  // required string msginfo = 2;
   if (has_msginfo()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->msginfo().data(), this->msginfo().length(),
@@ -337,7 +337,7 @@ void msg::SerializeWithCachedSizes(
         2, this->msginfo(), target);
   }
 
-  // required string MsgFrom = 3;
+  // required string msgfrom = 3;
   if (has_msgfrom()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->msgfrom().data(), this->msgfrom().length(),
@@ -368,21 +368,21 @@ int msg::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required int32 MsgType = 1;
+    // required int32 msgtype = 1;
     if (has_msgtype()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
           this->msgtype());
     }
 
-    // required string MsgInfo = 2;
+    // required string msginfo = 2;
     if (has_msginfo()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->msginfo());
     }
 
-    // required string MsgFrom = 3;
+    // required string msgfrom = 3;
     if (has_msgfrom()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -480,6 +480,6 @@ void msg::Swap(msg* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace demo
+}  // namespace wk
 
 // @@protoc_insertion_point(global_scope)

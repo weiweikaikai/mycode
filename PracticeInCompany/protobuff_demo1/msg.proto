@@ -1,0 +1,11 @@
+package demo;
+
+message msg
+{
+    required int32 msgtype=1;
+    required string msginfo=2;
+    required string msgfrom=3;
+    optional string opt=4; //can select 
+}
+
+

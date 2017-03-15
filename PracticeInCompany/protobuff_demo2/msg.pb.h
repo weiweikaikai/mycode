@@ -26,7 +26,7 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 
-namespace demo {
+namespace wk {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_msg_2eproto();
@@ -91,17 +91,17 @@ class msg : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required int32 MsgType = 1;
+  // required int32 msgtype = 1;
   inline bool has_msgtype() const;
   inline void clear_msgtype();
-  static const int kMsgTypeFieldNumber = 1;
+  static const int kMsgtypeFieldNumber = 1;
   inline ::google::protobuf::int32 msgtype() const;
   inline void set_msgtype(::google::protobuf::int32 value);
 
-  // required string MsgInfo = 2;
+  // required string msginfo = 2;
   inline bool has_msginfo() const;
   inline void clear_msginfo();
-  static const int kMsgInfoFieldNumber = 2;
+  static const int kMsginfoFieldNumber = 2;
   inline const ::std::string& msginfo() const;
   inline void set_msginfo(const ::std::string& value);
   inline void set_msginfo(const char* value);
@@ -110,10 +110,10 @@ class msg : public ::google::protobuf::Message {
   inline ::std::string* release_msginfo();
   inline void set_allocated_msginfo(::std::string* msginfo);
 
-  // required string MsgFrom = 3;
+  // required string msgfrom = 3;
   inline bool has_msgfrom() const;
   inline void clear_msgfrom();
-  static const int kMsgFromFieldNumber = 3;
+  static const int kMsgfromFieldNumber = 3;
   inline const ::std::string& msgfrom() const;
   inline void set_msgfrom(const ::std::string& value);
   inline void set_msgfrom(const char* value);
@@ -134,7 +134,7 @@ class msg : public ::google::protobuf::Message {
   inline ::std::string* release_opt();
   inline void set_allocated_opt(::std::string* opt);
 
-  // @@protoc_insertion_point(class_scope:demo.msg)
+  // @@protoc_insertion_point(class_scope:wk.msg)
  private:
   inline void set_has_msgtype();
   inline void clear_has_msgtype();
@@ -169,7 +169,7 @@ class msg : public ::google::protobuf::Message {
 
 // msg
 
-// required int32 MsgType = 1;
+// required int32 msgtype = 1;
 inline bool msg::has_msgtype() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -191,7 +191,7 @@ inline void msg::set_msgtype(::google::protobuf::int32 value) {
   msgtype_ = value;
 }
 
-// required string MsgInfo = 2;
+// required string msginfo = 2;
 inline bool msg::has_msginfo() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -261,7 +261,7 @@ inline void msg::set_allocated_msginfo(::std::string* msginfo) {
   }
 }
 
-// required string MsgFrom = 3;
+// required string msgfrom = 3;
 inline bool msg::has_msgfrom() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -404,7 +404,7 @@ inline void msg::set_allocated_opt(::std::string* opt) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace demo
+}  // namespace wk
 
 #ifndef SWIG
 namespace google {
