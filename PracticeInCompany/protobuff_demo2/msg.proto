@@ -7,5 +7,3 @@ message msg
     required string msgfrom=3;
     optional string opt=4; //can select 
 }
-
-

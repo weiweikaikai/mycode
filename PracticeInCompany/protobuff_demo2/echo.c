@@ -1,4 +1,5 @@
 #include <async_serv/net_if.h>
+#include"msg.pb.h"
 
 int	get_pkg_len(int fd, const void* pkg, int pkglen, int isparent)
 {

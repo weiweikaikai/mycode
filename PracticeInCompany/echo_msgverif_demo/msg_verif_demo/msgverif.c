@@ -41,7 +41,7 @@ int proc_pkg_from_client(void* data, int len, fdsession_t* fdsess)
        {
           if(str[i] == 'k')
           {
-               return send_pkg_to_client(fdsess,(void*)"h",11 );
+               return send_pkg_to_client(fdsess,(void*)"hello",6 );
           }
        }
     return send_pkg_to_client(fdsess, data, len);

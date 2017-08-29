@@ -19,7 +19,8 @@ int	get_pkg_len(int fd, const void* pkg, int pkglen, int isparent)
 
 int proc_pkg_from_client(void* data, int len, fdsession_t* fdsess)
 {
-	return send_pkg_to_client(fdsess, data, len);
+    char* hello="hello weeks";
+	return send_pkg_to_client(fdsess, hello, 12);
 }
 
 void proc_pkg_from_serv(int fd, void* data, int len)

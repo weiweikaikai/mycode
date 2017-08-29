@@ -21,5 +21,5 @@ $(TARGETS): $(00)
 	$(CC) $(CFLAGS) -o $@ $< $(OO) $(LDFLAGS)
 
 clean:
-	rm -f *.o
+	rm -f echo_client *.o
 	rm -f $(TARGETS)

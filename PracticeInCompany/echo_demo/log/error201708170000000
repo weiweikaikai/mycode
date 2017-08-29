@@ -1,0 +1,7 @@
+[17:29:03] 0 [21613][../dll.c][49]register_plugin: dlopen error, ./echo.so: cannot open shared object file: No such file or directory
+[17:30:08] 0 [21640][../net.c][317]do_read_conn: connection [fd=12 ip=0xB601010A] closed by peer
+[17:31:42] 0 [21835][../net.c][317]do_read_conn: connection [fd=12 ip=0xB601010A] closed by peer
+[17:33:20] 0 [21895][../net.c][317]do_read_conn: connection [fd=12 ip=0xB601010A] closed by peer
+[17:33:52] 0 [21895][../net.c][317]do_read_conn: connection [fd=12 ip=0xE208010A] closed by peer
+[17:34:23] 0 [21895][../net.c][317]do_read_conn: connection [fd=12 ip=0xE208010A] closed by peer
+[17:36:10] 0 [21895][../net.c][317]do_read_conn: connection [fd=12 ip=0xE208010A] closed by peer

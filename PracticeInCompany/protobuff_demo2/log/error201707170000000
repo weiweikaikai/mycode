@@ -1,0 +1,1 @@
+[15:34:19] 0 [08704][../dll.c][49]register_plugin: dlopen error, ./echo.so: cannot open shared object file: No such file or directory

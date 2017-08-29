@@ -74,9 +74,10 @@ int proc_pkg_from_client(void* data, int len, fdsession_t* fdsess)
     //通过服务名连接到msgverif服务器
     if(msgverif_fd == -1){
         //msg_verif的服务名是 msgverif 服务ID赋0 connect_to_service 自行挑选可用的msgverif服务
-        msgverif_fd=connect_to_service("msgverif",0,64*1024,1);
+        msgverif_fd=connect_to_service("msgverif",1,64*1024,1);
         //连接失败
         if(msgverif_fd == -1){
+       //     printf("error\n");
           return send_pkg_to_client(fdsess,"system error!!\n",15);
         }
     }
@@ -127,7 +128,6 @@ void on_fd_closed(int fd)
       msgverif_fd =-1;
     }
 }
-
 
 
 static client_t *alloc_client(fdsession_t *fdsess){
