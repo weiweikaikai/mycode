@@ -1,7 +1,6 @@
 /*************************************************************************
 	> File Name: test1.cpp
-	> Author: weeks
-	> Mail: weeks@taomee.com
+	> Author: wk
 	> compiler: gcc4.3.2
 	> platform: linux
 	> Created Time: Mon 06 Mar 2017 01:44:41 PM CST
